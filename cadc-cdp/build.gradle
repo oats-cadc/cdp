@@ -11,6 +11,8 @@ repositories {
     mavenLocal()
 }
 
+jar.archiveName = "cadc-cdp.jar"
+
 sourceCompatibility = 1.7
 
 group = 'org.opencadc'
@@ -25,9 +27,13 @@ dependencies {
     compile 'xerces:xercesImpl:2.+'
     compile 'org.bouncycastle:bcprov-jdk15on:1.46'
 
-    compile 'org.opencadc:cadc-util:1.+'
-    compile 'org.opencadc:cadc-log:1.+'
-    compile 'org.opencadc:cadc-registry:1.+'
+    //compile 'org.opencadc:cadc-util:1.+'
+    //compile 'org.opencadc:cadc-log:1.+'
+    //compile 'org.opencadc:cadc-registry:1.+'
+    compile files('/home/bertocco/opt/opencadc/projects/core/cadc-util/build/libs/cadc-util.jar')
+    compile files('/home/bertocco/opt/opencadc/projects/core/cadc-log/build/libs/cadc-log.jar')
+    compile files('/home/bertocco/opt/opencadc/projects/reg/cadc-registry/build/libs/cadc-registry.jar')
+
 }
 
 configurations {
